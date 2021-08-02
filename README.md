@@ -1,2 +1,3 @@
-# curse-of-life
+# Curse of Life
+
 A game cursed
