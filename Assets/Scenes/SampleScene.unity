@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4996464737628656, guid: 878ab7498590f3e4dbc71d766fea5f3e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4996464737628656, guid: 878ab7498590f3e4dbc71d766fea5f3e, type: 3}
       propertyPath: m_LocalScale.x
@@ -172,6 +172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 878ab7498590f3e4dbc71d766fea5f3e, type: 3}
+--- !u!4 &234793764 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4996464737628656, guid: 878ab7498590f3e4dbc71d766fea5f3e, type: 3}
+  m_PrefabInstance: {fileID: 234793762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1465987064
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +285,7 @@ Transform:
   m_LocalScale: {x: 2.9423478, y: 2.1121545, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1465987068
 Rigidbody2D:
@@ -388,12 +393,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487013723}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -26}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0261344, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 234793764}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1646527735 stripped
 GameObject:
@@ -453,3 +458,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.038800955, y: 0.0065512243}
   m_Size: {x: 4.627602, y: 6.428636}
   m_Direction: 0
+--- !u!114 &1646527739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646527735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba269f605baa441f8acd0a0644d2ceb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: 0
+  jumpInput: 0
+  attacking: 0
