@@ -20,22 +20,34 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         playerAnimation = gameObject.GetComponent<PlayerAnimation>();
-        spawnAttack = Time.time + 1.0f;
+        spawnAttack = Time.time;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine("SpawnAttack");
         this.MainAttack();
     }
 
     void MainAttack()
     {
+        if (Time.time < spawnAttack || playerAnimation.jumpInput > 0) {
+            return;
+        }
+
+        if (Time.time > spawnAttack) {
+            mainAttacking = false;
+            topAttacking = false;
+            specialAttacking = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.Return)) {
             attacking = true;
             mainAttacking = true;
+            
+            Invoke("DispatchOneArrow", .3f);
+            
             return;
         }
 
@@ -50,28 +62,21 @@ public class PlayerAttack : MonoBehaviour
             specialAttacking = true;
             return;
         }
-
+        
         if (Input.GetKeyUp(KeyCode.Return)) {
             attacking = false;
-            mainAttacking = false;
-            topAttacking = false;
-            specialAttacking = false;
         }
     }
 
     void DispatchOneArrow()
     {
-        if (Time.time < spawnAttack) {
-            return;
-        }
-
         if (playerAnimation.facingRight) {
             Instantiate(
                 arrowRightPreFab,
                 new Vector3(gameObject.transform.position.x + 3f, gameObject.transform.position.y, gameObject.transform.position.z), 
                 Quaternion.identity
             );
-            spawnAttack += 1.2f;
+            UpdateSpawnAttack();
 
             return;
         }
@@ -81,14 +86,11 @@ public class PlayerAttack : MonoBehaviour
             new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), 
             Quaternion.identity
         );
-        spawnAttack += 1.2f;
+        UpdateSpawnAttack();
     }
 
-    IEnumerator SpawnAttack()
+    void UpdateSpawnAttack()
     {
-        while(attacking) {
-            yield return new WaitForSeconds(.1f);
-            DispatchOneArrow();
-        }
+        spawnAttack += 2f;
     }
 }
