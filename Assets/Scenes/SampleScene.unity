@@ -216,6 +216,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 10.53
       objectReference: {fileID: 0}
+    - target: {fileID: 1487013728, guid: 878ab7498590f3e4dbc71d766fea5f3e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -34.04
+      objectReference: {fileID: 0}
     - target: {fileID: 1061954042678176, guid: 878ab7498590f3e4dbc71d766fea5f3e, type: 3}
       propertyPath: m_Name
       value: Archer
@@ -555,8 +559,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963104352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.6731, y: 10.3447, z: 0}
-  m_LocalScale: {x: 3.3875673, y: 1.2177628, z: 1}
+  m_LocalPosition: {x: 38.4238, y: 18.0741, z: 0}
+  m_LocalScale: {x: 3.3956976, y: 1.6414225, z: 1}
   m_Children: []
   m_Father: {fileID: 1657239122}
   m_RootOrder: 10

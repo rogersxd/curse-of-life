@@ -14,6 +14,17 @@ public class ArrowAttackRight01 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
+
+        DestroyArrow();
+    }
+
+    void DestroyArrow()
+    {
+        Vector3 position = transform.position;
+        
+        if (position.x < -150f || position.x > 150f) {
+            Destroy(gameObject);
+        }
     }
 }
