@@ -36,13 +36,7 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
-        if (Time.time > spawnAttack) {
-            mainAttacking = false;
-            topAttacking = false;
-            specialAttacking = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return)) {
+        if (Input.GetKeyDown(KeyCode.Return) && !attacking) {
             attacking = true;
             mainAttacking = true;
             
@@ -62,10 +56,6 @@ public class PlayerAttack : MonoBehaviour
             specialAttacking = true;
             return;
         }
-        
-        if (Input.GetKeyUp(KeyCode.Return)) {
-            attacking = false;
-        }
     }
 
     void DispatchOneArrow()
@@ -77,7 +67,7 @@ public class PlayerAttack : MonoBehaviour
                 Quaternion.identity
             );
             UpdateSpawnAttack();
-
+            ResetAttack();
             return;
         }
 
@@ -87,10 +77,20 @@ public class PlayerAttack : MonoBehaviour
             Quaternion.identity
         );
         UpdateSpawnAttack();
+        ResetAttack();
+         
     }
 
     void UpdateSpawnAttack()
     {
-        spawnAttack += 2f;
+        spawnAttack += 1.4f;
+    }
+
+    void ResetAttack()
+    {
+        attacking = false;
+        mainAttacking = false;
+        topAttacking = false;
+        specialAttacking = false;
     }
 }

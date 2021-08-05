@@ -55,7 +55,11 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Attack()
     {
-        if (playerAttack.mainAttacking) {
+        if (Time.time < playerAttack.spawnAttack) {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return)) {
             animator.Play("Attack01");
             return;
         }
