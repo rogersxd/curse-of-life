@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float speedJump = 15.0f;
+    public float speed = 10.0f;
+    public float speedJump = 30.0f;
     public float horizontalInput;
     public float jumpInput;
     private PlayerAttack playerAttack;
