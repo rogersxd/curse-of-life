@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float speed = 10.0f;
-    public float speedJump = 30.0f;
+    private float speed = 15.0f;
+    private float speedJump = 5.0f;
     public float horizontalInput;
     public float jumpInput;
     private PlayerAttack playerAttack;
@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour
         
 
         if (! playerAttack.attacking && jumpInput > 0) {
-            transform.Translate(Vector3.up * (speed * 2) * Time.deltaTime);
+            transform.Translate(Vector3.up * (speedJump * 2) * Time.deltaTime);
         }
     }
 }

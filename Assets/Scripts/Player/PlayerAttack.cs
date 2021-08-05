@@ -67,7 +67,7 @@ public class PlayerAttack : MonoBehaviour
                 Quaternion.identity
             );
             UpdateSpawnAttack();
-            ResetAttack();
+            Invoke("ResetAttack", .8f);
             return;
         }
 
@@ -77,13 +77,13 @@ public class PlayerAttack : MonoBehaviour
             Quaternion.identity
         );
         UpdateSpawnAttack();
-        ResetAttack();
+        Invoke("ResetAttack", .8f);
          
     }
 
     void UpdateSpawnAttack()
     {
-        spawnAttack += 1.4f;
+        spawnAttack += 1f;
     }
 
     void ResetAttack()
