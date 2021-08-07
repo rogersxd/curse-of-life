@@ -38,9 +38,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Player\ArrowAttackRight01.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\ArrowAttackLeft01.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\FirstSummon\FirstSummonAnimation.cs" />
+     <Compile Include="Assets\Scripts\FirstSummon\FirstSummonMove.cs" />
      <None Include="Assets\Characters\Archer\ReadMe.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.15f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

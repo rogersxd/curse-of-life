@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    private float speed = 15.0f;
-    private float speedJump = 5.0f;
-    public float horizontalInput;
-    public float jumpInput;
+    public float speed = 15.0f;
+    public float speedJump = 20.0f;
+    private float horizontalInput;
+    private float jumpInput;
     private PlayerAttack playerAttack;
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour
         
 
         if (! playerAttack.attacking && jumpInput > 0) {
-            transform.Translate(Vector3.up * (speedJump * 2) * Time.deltaTime);
+            transform.Translate(Vector3.up * speedJump * Time.deltaTime);
         }
     }
 }
