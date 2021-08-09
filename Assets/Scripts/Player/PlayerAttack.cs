@@ -73,7 +73,7 @@ public class PlayerAttack : MonoBehaviour
 
         Instantiate(
             arrowLeftPreFab,
-            new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), 
+            new Vector3(gameObject.transform.position.x - 3f, gameObject.transform.position.y, gameObject.transform.position.z), 
             Quaternion.identity
         );
         UpdateSpawnAttack();

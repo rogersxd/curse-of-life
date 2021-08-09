@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 951997786}
   m_Layer: 0
   m_Name: ArrowRootRight
-  m_TagString: Untagged
+  m_TagString: MainArrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,6 +169,10 @@ PrefabInstance:
     - target: {fileID: 2922109185928847586, guid: f87e26ab5980640ca825215f5a73b40b, type: 3}
       propertyPath: m_Name
       value: ArrowRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922109185928847586, guid: f87e26ab5980640ca825215f5a73b40b, type: 3}
+      propertyPath: m_TagString
+      value: MainArrow
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8429060605657503357, guid: f87e26ab5980640ca825215f5a73b40b, type: 3}

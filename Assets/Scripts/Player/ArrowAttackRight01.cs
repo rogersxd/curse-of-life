@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowAttackRight01 : MonoBehaviour
 {
-    public float speed = 40.0f;
+    private float speed = 60.0f;
     // Start is called before the first frame update
     void Start()
     {
